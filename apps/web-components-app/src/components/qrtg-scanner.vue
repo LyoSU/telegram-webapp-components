@@ -18,9 +18,7 @@ export default {
     Telegram.WebApp.onEvent('themeChanged', setThemeClass);
     setThemeClass();
 
-    Telegram.WebApp.showScanQrPopup({
-      text: 'тестування',
-    });
+    Telegram.WebApp.showScanQrPopup({});
 
     Telegram.WebApp.MainButton.isVisible = true;
     Telegram.WebApp.MainButton.text = 'Відкрити сканер QR-коду';
@@ -45,7 +43,7 @@ export default {
     });
 
     Telegram.WebApp.MainButton.onClick(function() {
-      Telegram.WebApp.showScanQrPopup();
+      Telegram.WebApp.showScanQrPopup({});
     });
   }
 }
