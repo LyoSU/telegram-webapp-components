@@ -17,6 +17,11 @@ export default new VueRouter({
           props: (route) => route.query,
         },
         {
+          path: "qrtg-scanner",
+          component: () => import("@/components/qrtg-scanner.vue"),
+          props: (route) => route.query,
+        },
+        {
           path: "color-picker",
           component: () => import("@/components/color-picker.vue"),
           props: (route) => route.query,
