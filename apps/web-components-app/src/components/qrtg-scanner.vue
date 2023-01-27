@@ -25,7 +25,7 @@ export default {
 
     Telegram.WebApp.onEvent('qrTextReceived', function({data}) {
       if (!data.includes('?start=')) {
-        return Telegram.WebApp.showAlertPopup({
+        return Telegram.WebApp.showAlert({
           text: 'Невірний QR-код',
         });
       }
