@@ -24,7 +24,7 @@ export default {
     Telegram.WebApp.MainButton.text = 'Відкрити сканер QR-коду';
 
     Telegram.WebApp.onEvent('qrTextReceived', function({data}) {
-      if (!data.includes('?start=')) {
+      if (!data.includes('ІН: ') && !data.includes('?start=')) {
         return Telegram.WebApp.showAlert('Невірний QR-код');
       }
 
